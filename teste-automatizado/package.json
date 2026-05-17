@@ -1,0 +1,25 @@
+{
+  "name": "teste-automatizado",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Testes E2E API e UI com Playwright e TypeScript",
+  "scripts": {
+    "postinstall": "playwright install",
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=ui-chromium",
+    "test:ui:install": "playwright install chromium firefox webkit",
+    "test:ui:all": "playwright test --project=ui-chromium --project=ui-firefox --project=ui-webkit",
+    "test:ui:interactive": "playwright test tests/e2e/ui --ui",
+    "test:headed": "playwright test tests/e2e/ui --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:open": "playwright test --config=playwright.ui.config.ts --ui",
+    "test:open:all": "playwright test --ui --project=api --project=ui-chromium --project=ui-firefox --project=ui-webkit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.0"
+  }
+}
