@@ -8,14 +8,17 @@
     "test": "playwright test",
     "test:api": "playwright test --project=api",
     "test:ui": "playwright test --project=ui-chromium",
-    "test:ui:install": "playwright install chromium firefox webkit",
-    "test:ui:all": "playwright test --project=ui-chromium --project=ui-firefox --project=ui-webkit",
-    "test:ui:interactive": "playwright test tests/e2e/ui --ui",
+    "test:ui-install": "playwright install chromium firefox webkit",
+    "test:ui-all": "playwright test --project=ui-chromium --project=ui-firefox --project=ui-webkit",
+    "test:ui-interactive": "playwright test tests/e2e/ui --ui",
     "test:headed": "playwright test tests/e2e/ui --headed",
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
+    "test:api-report": "playwright test --project=api && npm run test:report",
+    "test:ui-report": "playwright test --project=ui-chromium && npm run test:report",
+    "test:report-all": "playwright test && npm run test:report",
     "test:open": "playwright test --config=playwright.ui.config.ts --ui",
-    "test:open:all": "playwright test --ui --project=api --project=ui-chromium --project=ui-firefox --project=ui-webkit"
+    "test:open-all": "playwright test --ui --project=api --project=ui-chromium --project=ui-firefox --project=ui-webkit"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
