@@ -36,12 +36,6 @@ v22.x.x
 4. Feche e abra o terminal novamente
 5. Confirme com `node -v` e `npm -v`
 
-No macOS, também é possível usar [Homebrew](https://brew.sh/):
-
-```bash
-brew install node
-```
-
 ### 2. Clonar ou abrir o projeto
 
 O repositório deve conter a pasta `teste-automatizado/` com os arquivos do projeto (`package.json`, `playwright.config.ts`, pasta `tests/`, etc.).
